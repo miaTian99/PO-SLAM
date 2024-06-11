@@ -1,0 +1,19 @@
+Edge Drawing: 2998.45ms on 321 KFs, 9.34095ms/KF
+EDlines: 3787.8ms on 321 KFs, 11.8ms/KF
+Line3D: 26227.3ms on 321 KFs, 81.7051ms/KF
+Decoupled: 1361.4ms on 332 KFs, 4.1006ms/KF
+Fitting: 6156.69ms on 321 KFs, 19.1797ms/KF
+Merging: 2078ms on 321 KFs, 6.47351ms/KF
+
+Parameters:
+MIN_LINE_LENGTH = 10
+MAX_LINE_LENGTH = 1000
+INIT_DEPTH_COUNT = 3
+MIN_SEGMENT_ANGLE = 30
+E1 = 1
+E2 = 1.5
+lambda_a = 10
+lambda_d = 0.02
+sigma_limit = 0.02
+
+Modeling: 74.4016ms on 332 KFs, 0.224101ms/KF

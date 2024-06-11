@@ -1,0 +1,2 @@
+/usr/bin/ar qc libproto_lib.a CMakeFiles/proto_lib.dir/offline_bbox.pb.cc.o
+/usr/bin/ranlib libproto_lib.a

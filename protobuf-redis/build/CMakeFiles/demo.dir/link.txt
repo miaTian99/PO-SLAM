@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdemo.a CMakeFiles/demo.dir/offline_bbox.pb.cc.o
+/usr/bin/ranlib libdemo.a

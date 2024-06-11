@@ -1,0 +1,20 @@
+syntax = "proto2";  //规定proto版本
+
+package offline_bbox;  //定义包名,类比与C++中的命名空间或python中的模块
+
+message Bbox {  //定义消息,类比与C++或python中的类
+    optional int32 obj_id = 1;
+    optional int32 bbox_x = 2;
+    optional int32 bbox_y = 3;
+    optional int32 bbox_w = 4;
+    optional int32 bbox_h = 5;
+    optional float bbox_p = 6;
+}
+
+message offline_bboxes {
+    optional string time_sec = 1;
+    optional bytes image_data = 2;
+    optional string seq_name = 3;
+    optional string update_freq = 4;
+    repeated Bbox bbox = 5;
+}

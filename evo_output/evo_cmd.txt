@@ -1,0 +1,35 @@
+# save_as
+evo_traj tum/euroc data_cropped.csv --save_as_kitti
+evo_traj tum/euroc data_cropped.csv --save_as_tum
+
+# ape
+# === for test ===
+evo_ape tum groundtruth.tum SMT04KeyFrameTrajectory.txt -va --plot --plot_mode xyz -s --save_results ape.zip
+evo_ape kitti data_cropped.kitti HM01CameraTrajectory1.txt -va --plot --plot_mode xyz -s --save_results ape.zip
+evo_ape kitti data_cropped.kitti SMT4CameraTrajectory.kitti --plot --plot_mode xyz --save_results ape_trans.zip
+# === for po-slam ===
+# 1. cam traj
+evo_ape kitti data_cropped.kitti traj_trans.kitti --plot --plot_mode xyz --save_results ape_trans.zip
+evo_ape kitti data_cropped.kitti traj_trans.kitti -va --plot --plot_mode xyz -s --save_results ape_trans+aligned.zip
+
+# 2. obj_centric_traj
+evo_ape kitti gt_obj_rela.kitti SePT01_ObjPose_uf50_obj_rela.kitti --plot --plot_mode xyz --save_results ape_trans_obj_rela.zip
+evo_ape kitti gt_obj_rela.kitti SePT01_ObjPose_uf50_obj_rela.kitti -va --plot --plot_mode xyz --save_results ape_trans+aligned_obj_rela.zip
+
+
+# traj
+# === for test ===
+evo_traj tum SMT04KeyFrameTrajectory.txt --ref=groundtruth.tum -p --plot_mode xyz -a --correct_scale
+evo_traj kitti MH01CameraTrajectory1.txt --ref=data_cropped.kitti -p --plot_mode xyz --correct_scale
+evo_traj kitti SMT4ObjPose_obj_rela.kitti --ref=data_cropped_obj_rela.kitti -p --plot_mode xyz --correct_scale
+
+# === for po-slam ===
+# 1. cam traj
+evo_traj kitti traj_trans.kitti --ref=data_cropped.kitti -p --plot_mode xyz --correct_scale
+evo_traj kitti traj_trans.kitti --ref=data_cropped.kitti -p --plot_mode xyz -a --correct_scale
+# 2. obj_centric_traj
+evo_traj kitti SePT01_ObjPose_uf50_obj_rela.kitti --ref=gt_obj_rela.kitti -p --plot_mode xyz --correct_scale
+evo_traj kitti SePT01_ObjPose_uf50_obj_rela.kitti --ref=gt_obj_rela.kitti -p --plot_mode xyz -a --correct_scale
+
+# eval_error
+evo_traj kitti error_obj_rela.kitti -p --plot_mode xyz
