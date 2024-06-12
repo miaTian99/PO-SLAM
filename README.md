@@ -2,9 +2,20 @@
 
   **intro:** This repo proposes a SAM-augmented target-oriented SLAM framework that enables planetary rovers to identify target, estimate the relative position, and reconstruct/represent the target from abstraction to precision. This object SLAM algorithms can work in an unstructured, weakly textured, and lunar terrain environment.
 
+  ![Target-oriented SLAM](https://github.com/miaTian99/PO-SLAM/tree/main/figures/object-oriented_SLAM.png)
+
 ## 1. Structure
 
-
+```mermaid
+flowchart LR
+	id1(PO-SLAM) --> id2([datset]) --> id9[[[SePT Dataset](https://github.com/miaTian99/SePT_Stereo-Planetary-Tracks)]] 
+	id1(PO-SLAM) --> id3([Examples]) --> id10[[Save .cc/.yaml/timestamp files]] 
+	id1(PO-SLAM) --> id4([include]) --> id11[[Head files for PO-SLAM]] 
+	id1(PO-SLAM) --> id5([src]) --> id12[[Source files for PO-SLAM]]
+	id1(PO-SLAM) --> id6([protobuf-redis]) --> id13[[Save defined protos and subscribe source files]]
+	id1(PO-SLAM) --> id7([results_line_segments]) --> id14[[Save the demi-dense model for each object]]
+	id1(PO-SLAM) --> id8([Thirdparty]) --> id15[[Reliable thirdparty files, such as g2o]]
+```
 
 ## 2. Quick Running
 ### 2.1 Prerequisites
@@ -24,13 +35,69 @@ or
 ``` 
 ./Path_to_executeFile DataAssoParam ./Path_to_vocabularyFile ./Path_to_yaml Path_to_DataFolder ./Path_to_timestampFile
 ``` 
-### 2.4 Results&Eval
-+ CameraTrajectory[EuRoC]: save in ./evo_output
-+ ObjectRelativePoses[EuRoC]: save in ./evo_output 
-+ Line3D++: save in ./results_line_segments
-+ Related cmds are shown in: ./evo_output/evo_cmd.txt
-## 3. Examples
+### 2.4 Results
 
+> The mean matching accuracy figure based on SOTA matching baselines:
+  ![MMA Curves](https://github.com/miaTian99/PO-SLAM/tree/main/figures/mma_curves.png)
+
+> Object instances extraction results:
+  ![OIE Results](https://github.com/miaTian99/PO-SLAM/tree/main/figures/OIE_results.png)
+
+> Trajectories's results (evo):
+  <center class="half">
+  <img src="https://github.com/miaTian99/PO-SLAM/tree/main/figures/mask_with_kps.png" width="50%" align=left><img src="https://github.com/miaTian99/PO-SLAM/tree/main/figures/relative_positioning.png" width="50%" align=right>
+  </center>
+
+> Rocks reconstruction results:
+  ![Rocks Reconstruction](https://github.com/miaTian99/PO-SLAM/tree/main/figures/OIE_results.png)
+
+### 2.5 Eval
++ CameraTrajectory[EuRoC]: save in [evo_output](https://github.com/miaTian99/PO-SLAM/tree/main/evo_output)
++ ObjectRelativePoses[EuRoC]: save in [evo_output](https://github.com/miaTian99/PO-SLAM/tree/main/evo_output)
++ Line3D++: save in [results_line_segments](https://github.com/miaTian99/PO-SLAM/tree/main/results_line_segments)
++ Related cmds are shown in: [evo_output/evo_cmd.txt](https://github.com/miaTian99/PO-SLAM/tree/main/evo_output/evo_cmd.txt)
+## 3. Examples
+### 3.1 Input Stereo images
+<center class="half">
+<img src="https://github.com/miaTian99/PO-SLAM/tree/main/figures/left.png" width="50%" align=left><img src="https://github.com/miaTian99/PO-SLAM/tree/main/figures/right.png" width="50%" align=right>
+</center>
+
+> The PO-SLAM inputs stereo images (stereo baseline: 150mm)
+
+### 3.2 Prepare object extraction for data association
+> The patch2pix is utilized for image matching (left camera), an example result is: 
+
+  ![Image matching result](https://github.com/miaTian99/PO-SLAM/tree/main/figures/image_matching_result.png)
+
+> The keypoints work as prompt in SAM, then we got:
+
+<center class="half">
+<img src="https://github.com/miaTian99/PO-SLAM/tree/main/figures/mask_with_kps.png" width="50%" align=left><img src="https://github.com/miaTian99/PO-SLAM/tree/main/figures/SAM_result.png" width="50%" align=right>
+</center>
+
+> As shown in left image above, the minimum bounding boxes (i.e., [objectID, x, y, w, h, confidence]) are obtained and saved as txt files, which can be used as offline input for PO-SLAM. 
+> PS: these boxes can generate 1FPS by running protobuf+redis scripts ([subscribe_semanticStereo.cc](https://github.com/miaTian99/PO-SLAM/tree/main/protobuf-redis/src/subscribe_semanticStereo.cc).
+
+### 3.3 Run PO-SLAM for Lunar01(SePT01)
+
+  ```
+  ./build.sh
+  bash sept_examples.sh
+  ``` 
+or
+  ```
+  ./build.sh
+  ./Examples/Stereo/stereo_SePT EAO ./Vocabulary/ORBvoc.bin ./Examples/Stereo/SePT01.yaml ./dataset/SePT/SePT01 ./Examples/Stereo/TimeStamps/SePT01.txt
+  ```
+> The running demo is like: 
+
+  ![Running Demo](https://github.com/miaTian99/PO-SLAM/tree/main/figures/running_windows.png)
+
+### 3.4 Results
+
++ CameraTrajectory: save in [evo_output](https://github.com/miaTian99/PO-SLAM/tree/main/evo_output)
++ ObjectRelativePoses: save in [evo_output](https://github.com/miaTian99/PO-SLAM/tree/main/evo_output)
++ Semi-dense reconstruction for Rock1: save in [results_line_segments](https://github.com/miaTian99/PO-SLAM/tree/main/results_line_segments)
 
 ## 4. Video
 -  Local: the demo video is saved in 902

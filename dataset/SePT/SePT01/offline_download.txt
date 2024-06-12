@@ -1,0 +1,9 @@
+1. offline folder:
+   -- result_uf50 (image matching results, template update frequency is 1 per 50 frames)
+   -- sam_mask_uf50 (SAM results)
+   -- semantic_bboxes_uf50 (minimum bounding box of SAM results, [objectId, x, y, w, h, confidence])
+
+2. download link (only for SePT01, other sequences are saved in 902, please contact author):
+   -- result_uf50: /902_data/3-个人/7-田瑶琳/4-实验结果/LO-SLAM/SePT/SePT01/mav0/result_uf50
+   -- sam_mask_uf50: /902_data/3-个人/7-田瑶琳/4-实验结果/LO-SLAM/SePT/SePT01/mav0/sam_mask_uf50
+   -- semantic_bboxes_uf50: /902_data/3-个人/7-田瑶琳/4-实验结果/LO-SLAM/SePT/SePT01/mav0/semantic_bboxes_uf50
