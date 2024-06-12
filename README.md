@@ -64,7 +64,7 @@ or
 
 <figure>
   <p align="center" >
-    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_model.png" width="32%"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_point_clouds.gif" width="32%"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_mesh.gif" width="32%">
+    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_model.png" height="720px"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_point_clouds.gif" height="720px"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_mesh.gif" height="720px">
   </p>
 </figure> 
 &nbsp;
@@ -96,14 +96,14 @@ or
 
 <figure>
   <p align="center" >
-    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/mask_with_kps.png" width="49%"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/SAM_result.png" width="49%">
+    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/mask_with_kps.png" width="49%" align="left"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/SAM_result.png" width="49%" align="right">
   </p>
 </figure>
 &nbsp;
 
 > As shown in left image above, the minimum bounding boxes (i.e., [objectID, x, y, w, h, confidence]) are obtained and saved as txt files, which can be used as offline input for PO-SLAM. 
 
-> PS: these boxes can generate 1FPS by running protobuf+redis scripts ([subscribe_semanticStereo.cc](https://github.com/miaTian99/PO-SLAM/blob/main/protobuf-redis/src/subscribe_semanticStereo.cc).
+> PS: these boxes can generate 1FPS by running protobuf+redis scripts ([subscribe_semanticStereo.cc](https://github.com/miaTian99/PO-SLAM/blob/main/protobuf-redis/src/subscribe_semanticStereo.cc)).
 
 ### 3.3 Run PO-SLAM for Lunar01(SePT01)
 
