@@ -43,20 +43,31 @@ or
 
 > Object instances extraction results:
 
-![OIE Results](https://github.com/miaTian99/PO-SLAM/blob/main/figures/OIE_results.png)
+![OIE Results](https://github.com/miaTian99/PO-SLAM/blob/main/figures/OIE_results.jpg)
 
-> Trajectories's results (evo):
+> Trajectories's results (camera positioning):
 
-<figure>
+<!-- <figure>
   <p align="center" >
     <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/relative_positioning.png" width="49%"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/relative_positioning.png" width="49%">
   </p>
-</figure>
-&nbsp;
+</figure> -->
+
+![Camera Positioning](https://github.com/miaTian99/PO-SLAM/blob/main/figures/camera_positioning.png)
+
+
+> Trajectories's results (relative positioning):
+
+![Target-oriented Positioning](https://github.com/miaTian99/PO-SLAM/blob/main/figures/relative_positioning.png)
 
 > Rocks reconstruction results:
 
-![Rocks Reconstruction](https://github.com/miaTian99/PO-SLAM/blob/main/figures/OIE_results.png)
+<figure>
+  <p align="center" >
+    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_model.png" width="32%"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_point_clouds.gif" width="32%"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_mesh.gif" width="32%">
+  </p>
+</figure> 
+&nbsp;
 
 ### 2.5 Eval
 + CameraTrajectory[EuRoC]: save in [evo_output](https://github.com/miaTian99/PO-SLAM/blob/main/evo_output)
@@ -117,7 +128,7 @@ or
 
 ## 4. Video
 -  Local: the demo video is saved in 902
-- demo: blibli
+- demo: [Youtube](https://youtu.be/zQ4hKNucBUo)
 ## 5. Notes
 -  First time before running: remove all cmake build files in all folders
 - Defualt execute file is: [stereo_SePT.cc](https://github.com/miaTian99/PO-SLAM/blob/main/Examples/Stereo/stereo_SePT.cc)
