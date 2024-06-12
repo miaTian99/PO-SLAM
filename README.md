@@ -49,9 +49,10 @@ or
 
 <figure>
   <p align="center" >
-    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/relative_positioning.png" width="45%" align=left><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/relative_positioning.png" width="45%" align=right>
+    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/relative_positioning.png" width="49%"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/relative_positioning.png" width="49%">
   </p>
 </figure>
+&nbsp;
 
 > Rocks reconstruction results:
 
@@ -69,10 +70,10 @@ or
 
 <figure>
   <p align="center" >
-    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/left.png" width="45%" align=left><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/right.png" width="45%" align=right>
+    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/left.png" width="49%"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/right.png" width="49%">
   </p>
 </figure> 
-
+&nbsp;
 
 ### 3.2 Prepare object extraction for data association
 
@@ -84,9 +85,10 @@ or
 
 <figure>
   <p align="center" >
-    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/mask_with_kps.png" width="45%" align=left><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/SAM_result.png" width="45%" align=right>
+    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/mask_with_kps.png" width="49%"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/SAM_result.png" width="49%">
   </p>
 </figure>
+&nbsp;
 
 > As shown in left image above, the minimum bounding boxes (i.e., [objectID, x, y, w, h, confidence]) are obtained and saved as txt files, which can be used as offline input for PO-SLAM. 
 
@@ -118,9 +120,9 @@ or
 - demo: blibli
 ## 5. Notes
 -  First time before running: remove all cmake build files in all folders
-- Defualt execute file is: ./Examples/Stereo/stereo_SePT.cc
+- Defualt execute file is: [stereo_SePT.cc](https://github.com/miaTian99/PO-SLAM/blob/main/Examples/Stereo/stereo_SePT.cc)
 - Defualt segmentFusion image: left camera
-- Defualt protoFile and its execute file are located in: ./protobuf-redis/proto/offline_bbox.proto and ./protobuf-redis/src/subscribe_semanticStereo.cc
+- Defualt protoFile and its execute file are located in: [offline_bbox.proto](https://github.com/miaTian99/PO-SLAM/blob/main/protobuf-redis/proto/offline_bbox.proto) and [subscribe_semanticStereo.cc](https://github.com/miaTian99/PO-SLAM/blob/main/protobuf-redis/src/subscribe_semanticStereo.cc)
 - To record logs, please use:
 
     ```
