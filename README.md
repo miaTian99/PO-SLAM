@@ -64,7 +64,7 @@ or
 
 <figure>
   <p align="center" >
-    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_model.png" height="720px"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_point_clouds.gif" height="720px"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_mesh.gif" height="720px">
+    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_model.png" height="200x"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_point_clouds.gif" height="200px"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_mesh.gif" height="200px">
   </p>
 </figure> 
 &nbsp;
@@ -96,7 +96,7 @@ or
 
 <figure>
   <p align="center" >
-    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/mask_with_kps.png" width="49%" align="left"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/SAM_result.png" width="49%" align="right">
+    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/mask_with_kps.png" width="49%"> <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/SAM_result.png" width="49%">
   </p>
 </figure>
 &nbsp;
