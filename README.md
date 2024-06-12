@@ -64,7 +64,7 @@ or
 
 <figure>
   <p align="center" >
-    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_model.png" height="230x"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_point_clouds.gif" height="230px"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_mesh.gif" height="230px">
+    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_model.png" height="260x"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_point_clouds.gif" height="260px"><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/rock2_mesh.gif" height="260px">
   </p>
 </figure> 
 &nbsp;
