@@ -1,1 +1,3 @@
-*.cc linguist-language=C++ *.h linguist-language=C++ *.py linguist-language=Python
+*.cc linguist-detectable=true linguist-language=C++ 
+*.h linguist-detectable=true linguist-language=C++ 
+*.py linguist-detectable=true linguist-language=Python
