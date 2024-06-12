@@ -1,3 +1,4 @@
+*asc linguist-detectable=false
 *.cc linguist-detectable=true linguist-language=C++ 
 *.h linguist-detectable=true linguist-language=C++ 
 *.py linguist-detectable=true linguist-language=Python
