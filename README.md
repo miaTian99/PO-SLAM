@@ -49,7 +49,7 @@ or
 
 <figure>
   <p align="center" >
-    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/relative_positioning.png" width="50%" align=left><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/relative_positioning.png" width="50%" align=right>
+    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/relative_positioning.png" width="45%" align=left><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/relative_positioning.png" width="45%" align=right>
   </p>
 </figure>
 
@@ -67,13 +67,12 @@ or
 
 > The PO-SLAM inputs stereo images (stereo baseline: 150mm)
 
-<!-- <figure>
+<figure>
   <p align="center" >
-    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/left.png" width="50%" align=left><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/right.png" width="50%" align=right>
+    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/left.png" width="45%" align=left><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/right.png" width="45%" align=right>
   </p>
-</figure> -->
+</figure> 
 
-![left image](https://github.com/miaTian99/PO-SLAM/blob/main/figures/left.png "left image") ![right image](https://github.com/miaTian99/PO-SLAM/blob/main/figures/right.png "right image")
 
 ### 3.2 Prepare object extraction for data association
 
@@ -85,7 +84,7 @@ or
 
 <figure>
   <p align="center" >
-    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/mask_with_kps.png" width="50%" align=left><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/SAM_result.png" width="50%" align=right>
+    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/mask_with_kps.png" width="45%" align=left><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/SAM_result.png" width="45%" align=right>
   </p>
 </figure>
 
