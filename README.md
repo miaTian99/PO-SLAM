@@ -8,9 +8,9 @@
 
 ```mermaid
 flowchart LR
-	id1(PO-SLAM) --> id2([datset]) --> id9[[SePT Dataset (SePT_Stereo-Planetary-Tracks)]] 
-	id1(PO-SLAM) --> id3([Examples]) --> id10[[Save .cc/.yaml/timestamp files]] 
-	id1(PO-SLAM) --> id4([include]) --> id11[[Head files for PO-SLAM]] 
+	id1(PO-SLAM) --> id2([datset]) --> id9[[SePT_Stereo-Planetary-Tracks Dataset]]
+	id1(PO-SLAM) --> id3([Examples]) --> id10[[Save .cc/.yaml/timestamp files]]
+	id1(PO-SLAM) --> id4([include]) --> id11[[Head files for PO-SLAM]]
 	id1(PO-SLAM) --> id5([src]) --> id12[[Source files for PO-SLAM]]
 	id1(PO-SLAM) --> id6([protobuf-redis]) --> id13[[Save defined protos and subscribe source files]]
 	id1(PO-SLAM) --> id7([results_line_segments]) --> id14[[Save the demi-dense model for each object]]
@@ -38,18 +38,24 @@ or
 ### 2.4 Results
 
 > The mean matching accuracy figure based on SOTA matching baselines:
-  ![MMA Curves](https://github.com/miaTian99/PO-SLAM/blob/main/figures/mma_curves.png)
+
+![MMA Curves](https://github.com/miaTian99/PO-SLAM/blob/main/figures/mma_curves.png)
 
 > Object instances extraction results:
-  ![OIE Results](https://github.com/miaTian99/PO-SLAM/blob/main/figures/OIE_results.png)
+
+![OIE Results](https://github.com/miaTian99/PO-SLAM/blob/main/figures/OIE_results.png)
 
 > Trajectories's results (evo):
-  <center class="half">
-  <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/mask_with_kps.png" width="50%" align=left><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/relative_positioning.png" width="50%" align=right>
-  </center>
+
+<figure>
+  <p align="center" >
+    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/relative_positioning.png" width="50%" align=left><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/relative_positioning.png" width="50%" align=right>
+  </p>
+</figure>
 
 > Rocks reconstruction results:
-  ![Rocks Reconstruction](https://github.com/miaTian99/PO-SLAM/blob/main/figures/OIE_results.png)
+
+![Rocks Reconstruction](https://github.com/miaTian99/PO-SLAM/blob/main/figures/OIE_results.png)
 
 ### 2.5 Eval
 + CameraTrajectory[EuRoC]: save in [evo_output](https://github.com/miaTian99/PO-SLAM/blob/main/evo_output)
@@ -58,24 +64,31 @@ or
 + Related cmds are shown in: [evo_output/evo_cmd.txt](https://github.com/miaTian99/PO-SLAM/blob/main/evo_output/evo_cmd.txt)
 ## 3. Examples
 ### 3.1 Input Stereo images
-<center class="half">
-<img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/left.png" width="50%" align=left><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/right.png" width="50%" align=right>
-</center>
 
 > The PO-SLAM inputs stereo images (stereo baseline: 150mm)
 
+<figure>
+  <p align="center" >
+    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/left.png" width="50%" align=left><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/right.png" width="50%" align=right>
+  </p>
+</figure>
+
 ### 3.2 Prepare object extraction for data association
+
 > The patch2pix is utilized for image matching (left camera), an example result is: 
 
-  ![Image matching result](https://github.com/miaTian99/PO-SLAM/blob/main/figures/image_matching_result.png)
+![Image matching result](https://github.com/miaTian99/PO-SLAM/blob/main/figures/image_matching_result.png)
 
 > The keypoints work as prompt in SAM, then we got:
 
-<center class="half">
-<img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/mask_with_kps.png" width="50%" align=left><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/SAM_result.png" width="50%" align=right>
-</center>
+<figure>
+  <p align="center" >
+    <img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/mask_with_kps.png" width="50%" align=left><img src="https://github.com/miaTian99/PO-SLAM/blob/main/figures/SAM_result.png" width="50%" align=right>
+  </p>
+</figure>
 
 > As shown in left image above, the minimum bounding boxes (i.e., [objectID, x, y, w, h, confidence]) are obtained and saved as txt files, which can be used as offline input for PO-SLAM. 
+
 > PS: these boxes can generate 1FPS by running protobuf+redis scripts ([subscribe_semanticStereo.cc](https://github.com/miaTian99/PO-SLAM/blob/main/protobuf-redis/src/subscribe_semanticStereo.cc).
 
 ### 3.3 Run PO-SLAM for Lunar01(SePT01)
@@ -91,7 +104,7 @@ or
   ```
 > The running demo is like: 
 
-  ![Running Demo](https://github.com/miaTian99/PO-SLAM/blob/main/figures/running_windows.png)
+![Running Demo](https://github.com/miaTian99/PO-SLAM/blob/main/figures/running_windows.png)
 
 ### 3.4 Results
 
