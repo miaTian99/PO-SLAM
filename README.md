@@ -149,7 +149,16 @@ Thanks to following works: [**Image-Matching-Toolbox**](https://github.com/Grump
 ##  7. Contact
 - Author: Yaolin Tian (email: tianyaolin21@mails.ucas.ac.cn)
 -  Corresponding author:  [Xue Wan*](https://people.ucas.ac.cn/~wanxue), Email:  [wanxue@csu.ac.cn](mailto:wanxue@csu.ac.cn)
-- The paper is under submitting
+- [Updates]: The paper has been accepted by TGRS (aim for lunar objects)
+   ```
+    @article{Yaolin2025,
+      title={Lo-SLAM: Lunar Target-oriented SLAM Using Object Identification, Relative Navigation and Multi-level Mapping},
+      journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+      author={Yaolin Tian, Xue Wan, Shengyang Zhang, Jianhong Zuo, Yadong Shao, Baichuan Liu, and Mengmeng Yang},
+      year={2025}
+      doi={10.1109/TGRS.2025.3547292}
+    }
+    ```
 
     ```
     @article{Yaolin2024,
