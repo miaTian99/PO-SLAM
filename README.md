@@ -155,7 +155,7 @@ Thanks to following works: [**Image-Matching-Toolbox**](https://github.com/Grump
       title={Lo-SLAM: Lunar Target-oriented SLAM Using Object Identification, Relative Navigation and Multi-level Mapping},
       journal={IEEE Transactions on Geoscience and Remote Sensing}, 
       author={Yaolin Tian, Xue Wan, Shengyang Zhang, Jianhong Zuo, Yadong Shao, Baichuan Liu, and Mengmeng Yang},
-      year={2025}
+      year={2025},
       doi={10.1109/TGRS.2025.3547292}
     }
     ```
